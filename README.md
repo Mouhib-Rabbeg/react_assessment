@@ -1,2 +1,1 @@
-react_assessment
-
+Technical assessment React

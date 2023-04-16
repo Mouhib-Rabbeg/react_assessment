@@ -12,7 +12,7 @@ const CustomDatePicker= ({ label, value, onChange }:DatePickerProps) => {
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col md:flex-row">
       <label className="mb-2 text-sm font-medium text-gray-700">{label}</label>
       <input
         type="date"

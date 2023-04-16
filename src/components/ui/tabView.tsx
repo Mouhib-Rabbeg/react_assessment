@@ -6,7 +6,7 @@ const TabView = ({ tabs }:any) => {
   return (
     <div className="w-full ">
       <div className="border-b border-gray-200">
-        <nav className="-mb-px flex space-x-8 flex justify-center">
+        <nav className=" flex space-x-8 flex justify-center md:space-x-0">
           {tabs.map((tab:any) => (
             <button
               key={tab.id}

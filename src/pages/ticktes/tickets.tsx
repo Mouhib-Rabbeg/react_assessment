@@ -21,12 +21,13 @@ const tabData = [
 
 export default function Tickets() {
     return (
-        <div className="grid gap-6 mb-6 md:grid-cols-2">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-between">
             <div className='border border-gray-200 p-5'>
                 <LocationPicker />
                 <TabView tabs={tabData} />
             </div>
-            <div className='w-full'>
+            <div className='w-full h-full'>
                 <Map />
             </div>
         </div>

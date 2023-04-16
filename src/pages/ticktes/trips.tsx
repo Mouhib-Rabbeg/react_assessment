@@ -20,24 +20,23 @@ export default function Trips() {
     };
     return (
         <div className='w-full'>
-            <div className='flex justify-center space-x-8 '>
+            <div className='flex justify-center space-x-8'>
                 <RadioButton label='Departure' checked={selectedOption === 'rd1'} onChange={handleOptionChange} name='rd2' value='rd1' />
                 <RadioButton label='Arrival' checked={selectedOption === 'rd2'} onChange={handleOptionChange} name='rd2' value='rd2' />
             </div>
-            <div className='flex justify-center space-x-20 mt-2'>
-                <div>
+            <div className='flex justify-center flex-wrap'>
+                <div className='w-full md:w-1/2 mb-2 md:flex md:justify-center'>
                     <CustomDatePicker label='' value={selectedDate} onChange={handleDateChange} />
                 </div>
-                <div>
-                    <CustomTimePicker label="" value={selectedTime} onChange={handleTimeChange} />
+                <div className='w-full  mb-2 md:flex md:justify-center'>
+                    <CustomTimePicker label='' value={selectedDate} onChange={handleDateChange} />
                 </div>
-
             </div>
-            <div className='flex justify-between mt-5'>
-                <div className='w-60 '>
+            <div className='flex justify-between flex-wrap'>
+                <div className='w-full md:w-1/3 mb-2'>
                     <CustomButton icon={<AiOutlineRollback />} label='Reset' onClick={() => { }} />
                 </div>
-                <div className='w-60'>
+                <div className='w-full md:w-1/3'>
                     <CustomButton icon={<AiOutlineSearch />} label='Search' onClick={() => { }} />
                 </div>
             </div>
