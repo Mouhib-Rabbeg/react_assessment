@@ -18,30 +18,23 @@ function AsyncInputSelect(props: SelectInputProps) {
     //CALL API 
     props.onSearch(inputValue)
     .then((res: any) => {
+      const locations = res.data.locations.map((elt:any) => {
+        return {
+          label:elt.disassembledName,
+          value:elt.id
+        }
+      })
+      callback(locations)
     })
     .catch((err: any) => {
-        //MOCKED API CALL CORS PROBLEM
-        const mockedData = locations.map((elt:any) => {
-          return {
-            label:elt.disassembledName,
-            value:elt.disassembledName
-          }
-        }).filter((elt:any) => {
-          if(inputValue.length){
-            return elt.value.includes(inputValue)
-          }else {
-            return true
-          }
-        } )
-        callback(mockedData)
-  
+        //ERROR HANDLER
       })
   };
 
   return (
     <div>
       <label className="block mb-2 text-sm font-medium">{props.required && <span className='text-red-700 mr-1'>*</span>}{props.label}</label>
-      <AsyncSelect cacheOptions loadOptions={useDebouncedCallback(loadOptions, 1000)}  />
+      <AsyncSelect cacheOptions loadOptions={useDebouncedCallback(loadOptions, 1000)} defaultOptions />
     </div>
   )
 }
