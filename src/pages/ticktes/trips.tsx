@@ -28,7 +28,7 @@ export default function Trips() {
                 <div className='w-full md:w-1/2 mb-2 md:flex md:justify-center'>
                     <CustomDatePicker label='' value={selectedDate} onChange={handleDateChange} />
                 </div>
-                <div className='w-full  mb-2 md:flex md:justify-center'>
+                <div className='w-full md:w-1/2  mb-2 md:flex md:justify-center'>
                     <CustomTimePicker label='' value={selectedDate} onChange={handleDateChange} />
                 </div>
             </div>
