@@ -9,3 +9,5 @@ Utils  ==> Consists of some repeatedly used functions
 
 For the main purpose i ve created a component named asyncInputSelect so that it can be reused,just like the name says it loads options from a remote source as the user types.
 To make the search more efficient and performant i ve created a debounce hook to prevent api call on every key strok.
+
+For the api provided with the assessment it gives cors problem,so i ve mocked the response and use it.
